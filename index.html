@@ -304,6 +304,59 @@
             .container { padding: 20px 15px; }
             section { padding: 25px; }
         }
+
+        /* 插画画廊 */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .gallery-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            transition: all 0.4s ease;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 217, 255, 0.3);
+            border-color: rgba(0, 217, 255, 0.5);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(0, 217, 255, 0.1), rgba(0, 0, 0, 0.3));
+            color: #00d9ff;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-item img {
+                height: 220px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -468,6 +521,40 @@
             </blockquote>
 
             <p>站在 2026 年展望 2076 年，我们看到的不仅是科技的进步，更是人类文明的成熟。那个未来充满希望，而通往未来的道路，正始于我们今天的每一个选择。</p>
+        </section>
+
+        <!-- 未来世界插画 -->
+        <section class="scroll-animate">
+            <h2>🎨 未来世界视觉画廊</h2>
+            
+            <p>以下是通过 AI 生成的未来世界概念插画，展现 2076 年可能的景象：</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://image.pollinations.ai/prompt/futuristic%20city%202076%20vertical%20forest%20skyscrapers%20bioluminescent%20plants%20flying%20cars%20cyberpunk%20neon%20lights%20night%20scene?width=800&height=600&nologo=true" alt="未来垂直城市" loading="lazy">
+                    <div class="gallery-caption">🏙️ 垂直生态城市 - 建筑与自然的完美融合</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://image.pollinations.ai/prompt/space%20elevator%202076%20earth%20orbit%20futuristic%20technology%20sci-fi%20stars%20planet%20view?width=800&height=600&nologo=true" alt="太空电梯" loading="lazy">
+                    <div class="gallery-caption">🚀 太空电梯 - 连接地球与宇宙的通道</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://image.pollinations.ai/prompt/humanoid%20robot%202076%20friendly%20AI%20companion%20futuristic%20home%20holographic%20interface%20warm%20lighting?width=800&height=600&nologo=true" alt="AI 机器人伙伴" loading="lazy">
+                    <div class="gallery-caption">🤖 AI 机器人伙伴 - 人类的智能伴侣</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://image.pollinations.ai/prompt/mars%20colony%202076%20dome%20city%20red%20planet%20futuristic%20architecture%20terraforming%20sci-fi?width=800&height=600&nologo=true" alt="火星殖民地" loading="lazy">
+                    <div class="gallery-caption">🔴 火星殖民地 - 人类的第二家园</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://image.pollinations.ai/prompt/quantum%20computer%202076%20holographic%20display%20futuristic%20laboratory%20glowing%20circuits%20blue%20light?width=800&height=600&nologo=true" alt="量子计算机" loading="lazy">
+                    <div class="gallery-caption">💻 量子计算中心 - 无限算力的核心</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://image.pollinations.ai/prompt/underwater%20city%202076%20ocean%20habitat%20transparent%20domes%20marine%20life%20futuristic%20submarine%20bioluminescent?width=800&height=600&nologo=true" alt="海底城市" loading="lazy">
+                    <div class="gallery-caption">🌊 海底城市 - 探索深蓝的新前沿</div>
+                </div>
+            </div>
         </section>
 
         <!-- 页脚 -->
